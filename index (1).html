@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق التزلج</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>تطبيق التزلج</h1>
+        <nav>
+            <button onclick="showSection('home')">الرئيسية</button>
+            <button onclick="showSection('templates')">القوالب</button>
+            <button onclick="showSection('about')">حول</button>
+        </nav>
+    </header>
+    <section id="home" class="section active">
+        <h2>مرحباً بك في التطبيق!</h2>
+        <p>اختر أحد القوالب لبدء المعاينة.</p>
+    </section>
+    <section id="templates" class="section">
+        <h2>القوالب المتاحة</h2>
+        <div class="template-card">
+            <h3>قالب رياضي</h3>
+            <p>قالب مناسب للرياضات الشتوية.</p>
+            <button onclick="previewTemplate('قالب رياضي')">معاينة</button>
+        </div>
+        <div class="template-card">
+            <h3>قالب احترافي</h3>
+            <p>تصميم مناسب للعروض والأعمال.</p>
+            <button onclick="previewTemplate('قالب احترافي')">معاينة</button>
+        </div>
+    </section>
+    <section id="about" class="section">
+        <h2>معلومات</h2>
+        <p>هذا التطبيق يوفر قوالب جاهزة للتعديل والاستخدام.</p>
+    </section>
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePreview()">&times;</span>
+            <h2 id="previewTitle"></h2>
+            <p>هذه معاينة للقالب.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
